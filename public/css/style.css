@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
 
-    padding-top: 160px;
+    padding-top: 140px;
 
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
 }
 
 .home img{
-    width: 170px;
+    width: 150px;
 }
 
 .home .buttons{
@@ -94,6 +94,10 @@
 
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .game .card header {
@@ -103,23 +107,46 @@
     justify-content: right;
 }
 
-.game .card .anwser{
+.game .card .text{
     width: 100%;
-    height: 85%;
 
     font-size: 28px;
-    font-weight: 700;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game .card footer {
-    height: 45px;
+.game .card .footerCard {
+    width: 100%;
 
     padding: 10px;
 
     display: flex;
     justify-content: right;
+}
+
+.game .card .footerCard img {
+    width: 35px;
+}
+
+.game .card .blocks{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game .card .blocks .block{
+    width: 20%;
+    height: 50px;
+
+    font-size: 15px;
+
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.game .card .blocks .block span{
+    width: 100%;
 }

@@ -1,10 +1,10 @@
 import Next from '../assets/next.png';
 
-export default function Button({text, onClick}){
+export default function Button({info, onClick}){
 
     return(
-        <button onClick={() => onClick()}>
-            <span>{text}<img src={Next} alt="next" /></span>
+        <button onClick={() => onClick('game', info.show)}>
+            <span>{info.nome}<img src={Next} alt="next" /></span>
         </button>
     )
 }
