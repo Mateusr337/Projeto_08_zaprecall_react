@@ -6,7 +6,7 @@ export default function Game(){
         <div className="game">
             <Header />
             <div className="main">
-                <Card />
+                <Card color='white'/>
             </div>
         </div>
     )}

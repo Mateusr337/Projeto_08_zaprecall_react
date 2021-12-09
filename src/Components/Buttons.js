@@ -1,10 +1,15 @@
 import Button from './Button';
 
-export default function Buttons(){
+export default function Buttons({onClick}){
+
+    let cards = ["Praticar React"];
 
     return(
-        <div className="buttons">
-            <Button  text="Praticar React"/>
-        </div>
-    )
-}
+        <>
+            {cards.map((card) => (
+            <div className="buttons">
+                <Button onClick={onClick}  text={card}/>
+            </div>
+            ))}
+        </>
+    )}
