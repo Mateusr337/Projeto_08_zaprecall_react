@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 160px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home input {
+    width: 300px;
+    height: 40px;
+
+    padding-left: 15px;
+    margin-top: 80px;
+    margin-bottom: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display: flex;
+}
+
+.home input::placeholder{
+    padding-left: 15px;
+    color: #000000;
+    font-weight: 300;
+}
+
+.home img{
+    width: 170px;
+}
+
+.home .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home button img{
+    width: auto;
+    height: 20px;
+
+    position: absolute;
+    right: 0px;
+}
+
+.home button{
+    width: 300px;
+    height: 60px;
+
+    border: 2px solid #FFEF61;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home button span{
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 25px;
+    position: relative;
+}
+
+.game .header{
+    padding: 20px;
+}
+
+.game .header img{
+    height: 45px;
+}
+
+.game .main{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game .card{
+    width: 350px;
+    height: 500px;
+
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+}
+
+.game .card header {
+    padding: 10px;
+
+    display: flex;
+    justify-content: right;
+}
+
+.game .card .anwser{
+    width: 100%;
+    height: 85%;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game .card footer {
+    height: 45px;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: right;
+}
