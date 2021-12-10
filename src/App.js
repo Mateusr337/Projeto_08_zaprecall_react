@@ -1,6 +1,8 @@
 import HomePage  from './Components/HomePage';
 import Game from './Components/Game';
-import FinalScreen  from './Components/FinalScreen';
+
+import './reset.css';
+import './style.css';
 import { useState } from 'react';
 
 const games = {
@@ -21,18 +23,18 @@ const games = {
 }
 
 export default function App(){
+
     const [view, setView] = useState(<HomePage onClick={changeView} />);
-    //const [view, setView] = useState(<FinalScreen />);
 
     function changeView(selected, game) {
         const screens = {
-            home: <HomePage />,
-            game: <Game changeView={changeView} game={games[game]}/>,
-            finalGame: <FinalScreen changeView={changeView}/>
+            home: <HomePage onClick={changeView}/>,
+            game: <Game changeView={changeView} game={games[game]}/>
         }
 
         setView(screens[selected]);
     }
+
 
     return(
         <>

@@ -1,4 +1,4 @@
-import icon from '/home/mateus/projetos/projeto_08_zaprecall_react/src/assets/arrow-undo-sharp.svg';
+import icon from '../assets/arrow-undo-sharp.svg';
 
 export default function Card({game, gaming, length, index}){
 

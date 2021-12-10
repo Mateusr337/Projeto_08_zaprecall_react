@@ -7,7 +7,7 @@ import FinalScreen  from './FinalScreen';
 import crying from '../assets/crying.jpeg';
 import { useState } from "react";
 
-export default function Game({game}){
+export default function Game({game, changeView}){
 
     const length = game.length;
     let index = 0;
@@ -53,7 +53,7 @@ export default function Game({game}){
     function finalGame(){
         let result;
         answeredCorrect === length ? result='sucess' : result='fail';
-        setShow(<FinalScreen message={finalMessage[result]}/>);
+        setShow(<FinalScreen message={finalMessage[result]} changeView={changeView}/>);
     }
 
     return(
