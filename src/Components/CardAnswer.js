@@ -1,6 +1,6 @@
 import Block from './BlockCard';
 
-export default function CardAnswer({game, gaming, length, indice}){
+export default function CardAnswer({game, gaming, length, index, rigthAnswer}){
 
     const blocks = [
         {color: 'black', text: 'Aprendi agora'},
@@ -11,11 +11,14 @@ export default function CardAnswer({game, gaming, length, indice}){
 
     return (
         <div className="card">
-            <header>{indice + 1}/{length}</header>
-            <span className="text">{game}</span>
+            <header>
+                <span>{game.question}</span>
+                {index + 1}/{length}
+            </header>
+            <span className="text">{game.answer}</span>
             <footer className="blocks">
                 {blocks.map(block => (
-                    <Block color={block.color} text={block.text} gaming={gaming}/>
+                    <Block rigthAnswer={rigthAnswer} color={block.color} text={block.text} gaming={gaming}/>
                 ))}
             </footer>
         </div>
