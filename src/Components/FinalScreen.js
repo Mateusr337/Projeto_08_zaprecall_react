@@ -16,11 +16,14 @@ export default function FinalScreen({correct, message, restartView, updateInput,
    ];
 
     return(
-       <div className="finalScreen">
-        <span className="title">{message.title}</span>
-        <span className="text">{message.text}</span>
-        {buttons.map( (button, index) => (
-           <FinalButton key={index} correct={correct} text={button.text} action={button.action} parameter={button.parameter}/>
+      <div className="finalScreen">
+         <div>
+            <span className="title">{message.title}  </span>
+            <img src={message.emoji} alt='Emoji sad/party' />
+         </div>
+         <span className="text">{message.text}</span>
+         {buttons.map( (button, index) => (
+            <FinalButton key={index} correct={correct} text={button.text} action={button.action} parameter={button.parameter}/>
          ))}
-       </div>
+      </div>
     )}

@@ -5,6 +5,9 @@ import CardBorder from './CardBorder';
 import FinalScreen  from './FinalScreen';
 import { useState } from "react";
 
+import sad from '../assets/sad.png';
+import party from '../assets/party.png';
+
 var correct = 0;
 
 export default function Game({game, input, updateInput}){
@@ -48,10 +51,14 @@ export default function Game({game, input, updateInput}){
          
          let finalMessage = {
             fail: {
-                title: `Putz..`, text: `Você esqueceu ${length - correct} flashcards..Não desanime! Na próxima você consegue!`
+                title: `Putz..`, 
+                text: `Você esqueceu ${length - correct} flashcards..Não desanime! Na próxima você consegue!`,
+                emoji: sad
                 },
                 sucess: {
-                    title: `PARABÉNS!`, text: `Você não esqueceu de nenhum flashcard ou cumpriu sua meta!`
+                    title: `PARABÉNS!`, 
+                    text: `Você não esqueceu de nenhum flashcard ou cumpriu sua meta!`,
+                    emoji: party
                 }
             }
 

@@ -9,7 +9,8 @@ export default function HomePage({onClick, input, updateInput}){
             <div className="img">
                 <img src={Logo} alt="Logo"/>
             </div>
-            <input placeholder='Sua meta de zaps' value={input} onChange={e => updateInput(e.target.value)}/>
+            <input type='number' placeholder='Sua meta de zaps' value={input} onChange={e => updateInput(e.target.value)}/>
+            <span className="description">Coloque um número entre 0 e o máximo de perguntas do flashCard <br /> (número entre parenteses)</span>
             <Buttons onClick={onClick}/>
         </div>
     )}
