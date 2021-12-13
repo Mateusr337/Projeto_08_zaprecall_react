@@ -3,7 +3,7 @@ import Game from './Components/Game';
 
 import './reset.css';
 import './style.css';
-import { useState } from 'react';
+import react from 'react';
 
 const games = {
     jsx: [
@@ -22,19 +22,26 @@ const games = {
     ]
 }
 
+var input = '';
+
 export default function App(){
 
-    const [view, setView] = useState(<HomePage onClick={changeView} />);
+    function updateInput (text){
+        input = text;
+        setView(<HomePage onClick={changeView} input={input} updateInput={updateInput}/>)
+    }
+
+    const [view, setView] = react.useState(<HomePage onClick={changeView} input={input} updateInput={updateInput}/>);
+
 
     function changeView(selected, game) {
         const screens = {
-            home: <HomePage onClick={changeView}/>,
-            game: <Game changeView={changeView} game={games[game]}/>
+            home: <HomePage onClick={changeView} input={input} updateInput={updateInput}/>,
+            game: <Game game={games[game]} input={input} updateInput={updateInput}/>
         }
-
         setView(screens[selected]);
     }
-
+    
 
     return(
         <>

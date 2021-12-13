@@ -10,15 +10,15 @@ export default function CardAnswer({game, gaming, length, index, rigthAnswer}){
     ];
 
     return (
-        <div className="card">
-            <header>
+        <div className="card" data-identifier="flashcard">
+            <header data-identifier="counter">
                 <span>{game.question}</span>
                 {index + 1}/{length}
             </header>
             <span className="text">{game.answer}</span>
             <footer className="blocks">
-                {blocks.map(block => (
-                    <Block rigthAnswer={rigthAnswer} color={block.color} text={block.text} gaming={gaming}/>
+                {blocks.map((block, index) => (
+                    <Block key={index} rigthAnswer={rigthAnswer} color={block.color} text={block.text} gaming={gaming}/>
                 ))}
             </footer>
         </div>
